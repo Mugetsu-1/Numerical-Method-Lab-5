@@ -1,0 +1,32 @@
+Euler’s Method:
+
+    Start with initial values x0​ and y0.
+    Choose the step size h.
+    Calculate the slope using the function dy/dx=x+y
+    Update y using the formula: y=y+h⋅dydx(x,y)
+    Increment x by h.
+    Repeat until x reaches the desired value.
+
+Heun’s Method:
+
+    Start with initial values x0​ and y0​.
+    Choose the step size h.
+    Calculate the initial slope k1=dydx(x,y)
+    Estimate the next point: ypredict=y+h⋅k1
+    Calculate the slope at the predicted point k2=dydx(x+h,ypredict)
+    Average the slopes: y=y+(h/2)⋅(k1+k2)
+    Increment x by h.
+    Repeat until x reaches the desired value.
+
+Runge-Kutta 4th Order Method (RK4):
+
+    Start with initial values x0 and y0​.
+    Choose the step size h.
+    Calculate four slopes:
+        k1=h⋅dydx(x,y)
+        k2=h⋅dydx(x+h/2,y+k1/2
+        k3=h⋅dydx(x+h/2,y+k2/2)
+        k4=h⋅dydx(x+h,y+k3) 
+        Combine the slopes: y=y+(k1+2k2+2k3+k4)/6
+    Increment x by h.
+    Repeat until x reaches the desired value.
